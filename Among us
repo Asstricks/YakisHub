@@ -1,3 +1,27 @@
+   local Bing = { 
+            "7Eleven",
+            "-Eleven",
+            "--leven",
+            "---even",
+            "----ven",
+            "-----en",
+            "------n",
+            "en-----",
+            "ven-----",
+            "even----",
+            "leven--",
+            "Eleven-",
+            "7Eleven"
+           
+        }
+    
+    for index = 1, #Bing do
+ local pen =  Bing[index]
+   
+end
+
+
+
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
 
@@ -700,33 +724,9 @@ function CreateNewButton(ButtonConfig, Parent)
 	return Button, ButtonLabel
 end
 
-
-   
-    loopmarley = true
-    while loopmarley == true do
-        local Bing = { 
-            "7Eleven",
-            "-Eleven",
-            "--leven",
-            "---even",
-            "----ven",
-            "-----en",
-            "------n",
-            "en-----",
-            "ven-----",
-            "even----",
-            "leven--",
-            "Eleven-",
-            "7Eleven"
-           
-        
-    }
-    for index = 1, #Bing do
-    local Title = Title(index, Bing[index])
-    end
-end
-    function Material.Load(Config)
-    local Style = (Config.Style and math.clamp(Config.Style, 1, 3)) or 1
+function Material.Load(Config)
+	local Style = (Config.Style and math.clamp(Config.Style, 1, 3)) or 1
+	local Title = Config.Title or "MaterialLua"
 	local SizeX = Config.SizeX or 300
 	local SizeY = Config.SizeY or 500
 	local Theme = Config.Theme or "Light"
@@ -2471,7 +2471,5 @@ end
 
 	return TabLibrary
 end
-
-
 
 return Material
